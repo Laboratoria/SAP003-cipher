@@ -6,9 +6,35 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+
+    <div id="caesarfigure" name="caesarfigure">
+
+      <h2>Bem vindo</h2>
+
+      <h3>Mensagem</h3>
+      <input type="text" name="firstMsg" id="firstMsg" placeholder="escreva sua mensagem">
+      <br>
+
+      <h3>Número de deslocamento</h3>
+      <input type="number" name="deslocamento" id="deslocamento" placeholder="escreva um numero">
+      <br>
+
+      <input type="submit" id="bnt-enviar" value="Cifrar" onclick="caesarfigure()">
+      <br>
+      <input type="submit" id="bnt-enviar" value="Decifrar" onclick="caesarfigure()">
+
+      <p id="write-code"></p>
+      <p id="write-decode"></p>
+
     </div>
+
+    <!--
+    <script src="script.js"></script>
+
+    <script src="script-cifrar.js"></script>
+    <script src="script-decifrar.js"></script>
+    -->
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
