@@ -1,19 +1,27 @@
 window.cipher = {
   encode: encode,
   decode: decode
-  
-  
-  // ... criar a função de cifrar e decifrar
 };
 
-function encode(ossfet, string){
+function encode (msgCode, number) {
+  let result = "";
+  for (let i = 0; i < msgCode.length; i++) {
+    let letter = (msgCode.charCodeAt(i) -65 + number) % 26 + 65;
+    result += String.fromCharCode(letter);
+  }
 
-  console.log()
-  //magica
+  return result;
 }
 
+function decode (msgCode, number) {
 
+  let result = "";
+  for (let i = 0; i < msgCode.length; i++) {
+    let letter = (msgCode.charCodeAt(i) +65 - number) % 26 + 65;
 
-function decode(){
-  //magica
+    result += String.fromCharCode(letter);    
+    
+  }
+
+  return result;
 }

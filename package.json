@@ -4,7 +4,7 @@
   "main": "src/index.html",
   "license": "MIT",
   "scripts": {
-    "eslint": "eslint --ext .js src/ test/ ",
+    "eslint": "eslint --ext .js src/ test/ --fix",
     "pretest": "npm run eslint",
     "test-browser": "opener ./test/index.html",
     "test-node": "nyc mocha ./test/headless.js",

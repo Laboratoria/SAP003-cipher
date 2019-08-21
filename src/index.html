@@ -6,34 +6,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="cifraPrincipal" name="cifraPrincipal">
+      <h2>Bem vindo</h2>
+    
+      <h3>Mensagem</h3>
+      <input type="text" name="msgCode" id="msgCode" placeholder="escreva sua mensagem">
+      <br>
+    
+      <h3>Número de deslocamento</h3>
+      <input type="number" name="move" id="move" placeholder="escreva um numero">
+      <br>
 
-      <div id="cifraPrincipal" name="cifraPrincipal">
-
-          <h2>Bem vindo</h2>
-    
-          <h3>Mensagem</h3>
-          <input type="text" name="firstMsg" id="firstMsg" placeholder="escreva sua mensagem">
-          <br>
-    
-          <h3>Número de deslocamento</h3>
-          <input type="number" name="deslocamento" id="deslocamento" placeholder="escreva um numero">
-          <br>
-    
-          <input type="submit" id="bnt-enviar" value="Cifrar" onclick="cifra()">
-          <br>
-          <input type="submit" id="bnt-enviar" value="Decifrar" onclick="cifra()">
-    
-          <p id="write1"></p>
-          <p id="write2"></p>
-    
-        </div>
-
+      <button id="eText">Cifrar</button>
+      <button id="dText">Decifrar</button>
     <!--
-    <div id="root">
-      <h1>Hello world!</h1>
+      <input type="submit" id="eText" value="Cifrar" onclick="caesarFigureCode()">
+      <br>
+      <input type="submit" id="dText" value="Decifrar" onclick="caesarFigureDecode()">
+    -->
 
-      <button onclick="clickaqui()">clique aqui agora</button>
-    </div>-->
+      <h2>Essa é sua mensagem cifrada</h2>
+      <p id="write-code"></p>
+
+      <h2>Essa é sua mensagem decifrada</h2>
+      <p id="write-decode"></p>
+    
+    </div>
 
     <script src="cipher.js"></script>
     <script src="index.js"></script>
