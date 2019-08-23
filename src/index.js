@@ -7,22 +7,28 @@ b1.addEventListener("click", function() {
 
   let number = parseInt(document.getElementById("move").value);
 
-  let eText = window.cipher.encode(msg1, number);
+  let eText = window.cipher.encode(number, msg1);//
 
   document.getElementById("write-code").innerHTML = eText;
 
 });
 
-let b2= document.getElementById("dText");
 
 //function caesarFigureDecode() 
+let b2= document.getElementById("dText");
+
 b2.addEventListener("click", function() {
 
   let msg2 = document.getElementById("msgCode").value;
 
   let number = parseInt(document.getElementById("move").value);
 
-  let dText = window.cipher.decode(msg2, number);
+  let dText = window.cipher.decode(number, msg2);//
 
-  document.getElementById("write-decode").innerHTML = dText;
+  //document.getElementById("write-decode").innerHTML = dText;
+
+  
+//ARRUMARRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+  //document.getElementById("cipher").style.visibility = "visible";
+  //document.getElementById("write-code").innerHTML = "Essa é sua mensagem cifrada" + eText ;
 });
