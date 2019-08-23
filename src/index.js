@@ -25,7 +25,7 @@ b2.addEventListener("click", function() {
 
   let dText = window.cipher.decode(number, msg2);//
 
-  //document.getElementById("write-decode").innerHTML = dText;
+  document.getElementById("write-decode").innerHTML = dText;
 
   
 //ARRUMARRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
