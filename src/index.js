@@ -1,4 +1,4 @@
-//function caesarFigureCode() 
+//function caesarFigureCode()
 let b1= document.getElementById("eText");
 
 b1.addEventListener("click", function() {

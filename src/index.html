@@ -9,18 +9,24 @@
   <body>
 
     <div id="cifraPrincipal" name="cifraPrincipal">
-      <h2>Bem vindo</h2>
-    
-      <h3>Mensagem</h3>
-      <input type="text" name="msgCode" id="msgCode" placeholder="escreva sua mensagem">
-      <br>
-    
-      <h3>Número de deslocamento</h3>
-      <input type="number" name="move" id="move" placeholder="escreva um numero">
-      <br>
 
-      <button id="eText">Cifrar</button>
-      <button id="dText">Decifrar</button>
+      <header id="header">
+        <img src="../img/imglogo2.jpeg" alt="">
+      </header>
+
+      <section>
+    
+        <h3>Mensagem</h3>
+        <input type="text" name="msgCode" id="msgCode" class="color-hover" placeholder="escreva sua mensagem">
+        <br>
+      
+        <h3>Número de deslocamento</h3>
+        <input type="number" name="move" id="move" placeholder="escreva um numero">
+        <br>
+
+        <button id="eText">Cifrar</button>
+        <button id="dText">Decifrar</button>
+    </section>
       
       <div>
         <div id="cipher">
@@ -35,10 +41,11 @@
           <h2>Essa é sua mensagem decifrada</h2>
           <p id="write-decode"></p>
         </div>
+
+        
     </div>
-      
-    
-    </div>
+
+    <footer>README</footer>
 
     <script src="cipher.js"></script>
     <script src="index.js"></script>

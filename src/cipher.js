@@ -1,46 +1,44 @@
 window.cipher = {
   encode: encode,
   decode: decode
+
+  // consertar o decode minúsculo
 };
 
 function encode (number, msgCode) {
   let result = "";
-  
+  let letter = "";  
 
   for (let i = 0; i < msgCode.length; i++) {
-    //let letter = "";
-//    if(msgCode.charCodeAt(i) >= 97 && msgCode.charCodeAt(i) <= 122){//
-//      let letter = ((msgCode.charCodeAt(i) - 97) + number) % 26 + 97;//
-//      result += String.fromCharCode(letter);    //
-//    }else{//
-
-
-      let letter = (msgCode.charCodeAt(i) + number - 65) % 26 + 65;
-      //let letter = (msgCode.charCodeAt(i) + number - 60) % 120 + 60;
-      result += String.fromCharCode(letter);   
-//    }//
+     
+    if(msgCode.charCodeAt(i) >= 65 && msgCode.charCodeAt(i) <= 90){
+      letter = (msgCode.charCodeAt(i) - 65 + number) % 26 + 65;
+      result += String.fromCharCode(letter);
+   }else if(msgCode.charCodeAt(i) >= 97 && msgCode.charCodeAt(i) <= 122){
+      letter = (msgCode.charCodeAt(i) - 97 + number) % 26 + 97;
+      result += String.fromCharCode(letter); 
+   }else{
+      result += msgCode[i];      
+    }
   }
-
   return result;
 }
 
 function decode (number, msgCode) {
   let result = "";
-  
-
+  let letter = "";
   
   for (let i = 0; i < msgCode.length; i++) {
-    //let letter = "";
-//    if(msgCode.charCodeAt(i) >= 97 && msgCode.charCodeAt(i) <= 122){//
-//      let letter = ((msgCode.charCodeAt(i) - 97) - number +26) % 26 + 97;//
-//      result += String.fromCharCode(letter);//
-//    }else{
 
-
-      let letter = (msgCode.charCodeAt(i) + 65 - number) % 26 + 65;
-      //let letter = (msgCode.charCodeAt(i) + 60 - number) % 120 + 60;
-      result += String.fromCharCode(letter);   
-//    }
+    if(msgCode.charCodeAt(i) >= 65 && msgCode.charCodeAt(i) <= 90){
+      letter = (msgCode.charCodeAt(i) + 65 - number) % 26 + 65;
+      result += String.fromCharCode(letter);
+    }else if(msgCode.charCodeAt(i) >= 97 && msgCode.charCodeAt(i) <= 122){
+      letter = (msgCode.charCodeAt(i) -122 - number ) % 26 + 122;
+      result += String.fromCharCode(letter); 
+    }else{
+      result += msgCode[i];      
+    }
   }
   return result;
 }
