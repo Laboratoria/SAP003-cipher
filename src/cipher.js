@@ -11,13 +11,13 @@ function encode (number, msgCode) {
 
   for (let i = 0; i < msgCode.length; i++) {
      
-    if(msgCode.charCodeAt(i) >= 65 && msgCode.charCodeAt(i) <= 90){
+    if (msgCode.charCodeAt(i) >= 65 && msgCode.charCodeAt(i) <= 90) {
       letter = (msgCode.charCodeAt(i) - 65 + number) % 26 + 65;
       result += String.fromCharCode(letter);
-   }else if(msgCode.charCodeAt(i) >= 97 && msgCode.charCodeAt(i) <= 122){
+    } else if (msgCode.charCodeAt(i) >= 97 && msgCode.charCodeAt(i) <= 122) {
       letter = (msgCode.charCodeAt(i) - 97 + number) % 26 + 97;
       result += String.fromCharCode(letter); 
-   }else{
+    } else {
       result += msgCode[i];      
     }
   }
@@ -30,13 +30,13 @@ function decode (number, msgCode) {
   
   for (let i = 0; i < msgCode.length; i++) {
 
-    if(msgCode.charCodeAt(i) >= 65 && msgCode.charCodeAt(i) <= 90){
+    if (msgCode.charCodeAt(i) >= 65 && msgCode.charCodeAt(i) <= 90) {
       letter = (msgCode.charCodeAt(i) + 65 - number) % 26 + 65;
       result += String.fromCharCode(letter);
-    }else if(msgCode.charCodeAt(i) >= 97 && msgCode.charCodeAt(i) <= 122){
+    } else if (msgCode.charCodeAt(i) >= 97 && msgCode.charCodeAt(i) <= 122) {
       letter = (msgCode.charCodeAt(i) -122 - number ) % 26 + 122;
       result += String.fromCharCode(letter); 
-    }else{
+    } else {
       result += msgCode[i];      
     }
   }

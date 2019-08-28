@@ -1,8 +1,11 @@
 body{
-    background-image: url(../img/img2.png);
+    background-image: url(../img/img2.jpeg);
     background-color: #10314C;
+    background-attachment: fixed;
+    background-size: 100% 120%;
     background-repeat: no-repeat;
-    background-size: cover;
+    /*background-size: cover;*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #FAFAFA;
     width: auto;
     height: 400px;
@@ -14,7 +17,7 @@ body{
     width: 350px;
     height: 540px;;
     //border: 5px solid;
-    border-radius: 30px;
+    //border-radius: 30px;
     padding: 20px;
     text-align: center;
     text-align: center;
@@ -29,17 +32,20 @@ input{
     text-align: center;
     line-height: 1.5;
     border-bottom: 1.5px solid #E6E6E6;
+    width: 300px;
 }
-
+/*
 input:focus{
     border-bottom: 1.5px solid #C1B668;
-  }
+}
+*/
 
 textarea:focus, input:focus, select:focus {
     border-color: none !important;
     outline: 0;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
+    border-bottom: 1.5px solid #C1B668;
 }
 
 button{
@@ -51,9 +57,41 @@ button{
     border: none;
 }
 
+button:hover {
+    background: #C1B668;
+    opacity: 0.8;
+}
+
+button:focus {
+    background: #C1B668;
+}
+
 img{
     width: 200px;
 }
 
+h3{
+    font-weight: normal;    
+}
+
+.footer {
+    position:absolute;
+    bottom:0;
+    left: 0;
+    width:100%;
+    border: 1px solid #E6E6E6;
+    text-align: center;
+    background: #E6E6E6;
+    padding: 5px;
+}
+
+a{
+    color: #10314C;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration:underline;
+    background: #C1B668;
+}
 
 

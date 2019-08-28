@@ -15,14 +15,18 @@
       </header>
 
       <section>
-    
-        <h3>Mensagem</h3>
-        <input type="text" name="msgCode" id="msgCode" class="color-hover" placeholder="escreva sua mensagem">
-        <br>
-      
-        <h3>Número de deslocamento</h3>
-        <input type="number" name="move" id="move" placeholder="escreva um numero">
-        <br>
+
+        <div id="msg">    
+          <h3>Mensagem</h3>
+          <input type="text" name="msgCode" id="msgCode" class="color-hover" placeholder="escreva sua mensagem">
+          <br>
+        </div>
+
+        <div id="number">      
+          <h3>Número de deslocamento</h3>
+          <input type="number" name="move" id="move" placeholder="escreva um numero">
+          <br>
+        </div>
 
         <button id="eText">Cifrar</button>
         <button id="dText">Decifrar</button>
@@ -30,7 +34,6 @@
       
       <div>
         <div id="cipher">
-          <h2>Essa é sua mensagem cifrada</h2>
           <p id="write-code"></p>
         </div>
         
@@ -38,14 +41,15 @@
         <br>
 
         <div id="decipher">
-          <h2>Essa é sua mensagem decifrada</h2>
           <p id="write-decode"></p>
         </div>
 
         
     </div>
 
-    <footer>README</footer>
+    <footer class="footer">
+      <a href="http://www.htmlprogressivo.net/"> README </a>
+    </footer>
 
     <script src="cipher.js"></script>
     <script src="index.js"></script>
