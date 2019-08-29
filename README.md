@@ -2,9 +2,10 @@
 
 ## Índice
 
-*[1. Introdução](#1-introdução)
+* [1. Introdução](#1-introdução)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
 * [3. Objetivos](#3-objetivos)
+* [4. Interface do usuário (UI)](#4-interface-do-usuário)
 
 ***
 
@@ -17,9 +18,26 @@ Os clientes, em situações de exposição, além de correrem o risco de perdere
 
 ## 2. Resumo do projeto
 
-O dispositivo de segurança é acionado por meio da digitação de uma senha cifrada que só o cliente sabe, no momento de retirada de dinheiro ou até mesmo em uma compra com cartão de crédido, sem alertar o sequestrador. O cliente ao a ser obrigado a realizar o saque no caixa eletônico ou em efetuar compras com o cartão, ao invés de digitar a senha certa, usaria uma senha cifrada de emergência previamente cadastrada nas agências onde o cliente tem conta.
+O dispositivo de segurança é acionado por meio da digitação de uma senha cifrada que só o cliente sabe, no momento de retirada de dinheiro ou até mesmo em uma compra com cartão de crédido, sem alertar o sequestrador. O cliente ao ser obrigado a realizar o saque no caixa eletônico ou em efetuar compras com o cartão, ao invés de digitar a senha certa, usaria uma senha cifrada de emergência previamente cadastrada nas agências onde o cliente tem conta.
+
+O usuário deverá acessar o sistema e cifrar uma senha para ser a sua senha de "emergência", que quando digitada o sistema entrará no modo de segurança. 
 
 ## 3. Objetivos
 
 Os nossos principais usuários são os Bancos que oferecem o serviço de auto atendimento para os seus clientes e que querem melhorias na segurança dos serviços oferecidos aos que possam vir a passar pela iminente situação de um perigo como um sequestro relâmpago, por exemplo.
-O diferencial do sistema é poder ultilizar as funcionalidades do caixa eletônico com apenas uma porcentagem do saldo da conta disponível sem que a máquina dê qualquer sinal de que está em mode de segurança, aproposta é "iludir" o bandido e diminuir o dano financeiro mais de forma segura.
+O diferencial do sistema é poder ultilizar as funcionalidades do caixa eletônico com apenas uma porcentagem do saldo da conta disponível sem que a máquina dê qualquer sinal de que está em modo de segurança, a proposta é "iludir" o bandido e diminuir o dano financeiro mais de forma segura.
+
+
+## 4. Interface do usuário (UI)
+
+A interface do usuário:
+
+* Digitar uma mensagem (ex: HELP).
+
+* Digitar o número de deslocamento dos caracteres (ex: 7).
+
+* Clicar no botão Cifrar.
+
+* Ver o resultado da mensagem cifrada (ex: mensagem "HELP" deslocamento "7" = "OLSW").
+
+* Para decifrar a mensagem clicar no botão decifrar (ex: mensagem "OLSW" deslocamento "7" = HELP).

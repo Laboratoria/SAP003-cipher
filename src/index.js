@@ -8,7 +8,8 @@ b1.addEventListener("click", () => {
 
   let eText = window.cipher.encode(number, msg1);
 
-  document.getElementById("write-code").innerHTML = "Essa é sua msg cifrada: " + "</br>" + eText;
+  document.getElementById("write-decode").innerHTML = "";
+  document.getElementById("write-code").innerHTML = "Essa é sua mensagem cifrada: " + "</br>" + "</br>" + eText;
 
 });
 
@@ -22,6 +23,7 @@ b2.addEventListener("click", () => {
 
   let dText = window.cipher.decode(number, msg2);
 
-  document.getElementById("write-decode").innerHTML = "Essa é sua msg decifrada: " + "</br>" + dText;
+  document.getElementById("write-code").innerHTML = "";
+  document.getElementById("write-decode").innerHTML = "Essa é sua mensagem decifrada: " + "</br>"  + "</br>" + dText;
 
 });

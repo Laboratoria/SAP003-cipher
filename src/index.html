@@ -4,51 +4,43 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="" href="../img/logo-p1.png">
   </head>
   
   <body>
 
-    <div id="cifraPrincipal" name="cifraPrincipal">
+    <div id="cifraPrincipal">
 
       <header id="header">
-        <img src="../img/imglogo2.jpeg" alt="">
+        <img src="../img/logo-1.png" alt="">
       </header>
 
       <section>
-
         <div id="msg">    
           <h3>Mensagem</h3>
           <input type="text" name="msgCode" id="msgCode" class="color-hover" placeholder="escreva sua mensagem">
-          <br>
         </div>
 
         <div id="number">      
           <h3>Número de deslocamento</h3>
           <input type="number" name="move" id="move" placeholder="escreva um numero">
-          <br>
         </div>
 
         <button id="eText">Cifrar</button>
         <button id="dText">Decifrar</button>
-    </section>
+      </section>
       
       <div>
-        <div id="cipher">
-          <p id="write-code"></p>
-        </div>
-        
-        <br>
-        <br>
+        <div id="cipher"> 
+          <h3 id="write-code"></h3>        
+          <h3 id="write-decode"></h3>
+          </div>
+      </div>
 
-        <div id="decipher">
-          <p id="write-decode"></p>
-        </div>
-
-        
     </div>
 
     <footer class="footer">
-      <a href="http://www.htmlprogressivo.net/"> README </a>
+      <a href="https://github.com/KarineVerneque/SAP003-cipher/blob/master/README.md"> README </a>
     </footer>
 
     <script src="cipher.js"></script>
