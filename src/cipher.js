@@ -1,8 +1,6 @@
 window.cipher = {
   encode: encode,
   decode: decode
-
-  // consertar o decode minúsculo
 };
 
 function encode (number, msgCode) {
