@@ -3,40 +3,42 @@ window.cipher = {
   decode: decode
 };
 
-function encode (number, msgCode) {
+function encode (number, msg) {
   let result = "";
-  let letter = "";  
-
-  for (let i = 0; i < msgCode.length; i++) {
-     
-    if (msgCode.charCodeAt(i) >= 65 && msgCode.charCodeAt(i) <= 90) {
-      letter = (msgCode.charCodeAt(i) - 65 + number) % 26 + 65;
-      result += String.fromCharCode(letter);
-    } else if (msgCode.charCodeAt(i) >= 97 && msgCode.charCodeAt(i) <= 122) {
-      letter = (msgCode.charCodeAt(i) - 97 + number) % 26 + 97;
-      result += String.fromCharCode(letter); 
-    } else {
-      result += msgCode[i];      
+  for (let letter of msg) {
+    const msgCode = letter.charCodeAt();
+    const upperCaseLetter = (msgCode >= 65 && msgCode <= 90);
+    const lowerCaseLetter = (msgCode >= 97 && msgCode <= 122);
+    const specialCharacters = (msgCode >= 32 && msgCode <= 64);  
+    if (upperCaseLetter) {
+      result += String.fromCharCode((((msgCode - 65 + number) % 26)+65));
+    }
+    if (lowerCaseLetter) {
+      result += String.fromCharCode((((msgCode - 97 + number) % 26)+ 97));
+    }
+    if (specialCharacters) {
+      result += String.fromCharCode(msgCode)
     }
   }
   return result;
 }
 
-function decode (number, msgCode) {
-  let result = "";
-  let letter = "";
-  
-  for (let i = 0; i < msgCode.length; i++) {
-
-    if (msgCode.charCodeAt(i) >= 65 && msgCode.charCodeAt(i) <= 90) {
-      letter = (msgCode.charCodeAt(i) + 65 - number) % 26 + 65;
-      result += String.fromCharCode(letter);
-    } else if (msgCode.charCodeAt(i) >= 97 && msgCode.charCodeAt(i) <= 122) {
-      letter = (msgCode.charCodeAt(i) -122 - number ) % 26 + 122;
-      result += String.fromCharCode(letter); 
-    } else {
-      result += msgCode[i];      
+function decode (number, msg) {
+  let result = "";  
+  for (let letter of msg) {
+    const msgCode = letter.charCodeAt();
+    const upperCaseLetter = (msgCode >= 65 && msgCode <= 90);
+    const lowerCaseLetter = (msgCode >= 97 && msgCode <= 122);
+    const specialCharacters = (msgCode >= 32 && msgCode <= 64);  
+    if (upperCaseLetter) {
+      result += String.fromCharCode((((msgCode - 90 - number) % 26) + 90));
     }
+    if (lowerCaseLetter) {
+      result += String.fromCharCode((((msgCode - 122 - number) % 26) + 122));
+    }
+    if (specialCharacters) {
+      result += String.fromCharCode(msgCode)
+    }  
   }
-  return result;
+  return result
 }

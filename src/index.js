@@ -1,29 +1,18 @@
-let b1= document.getElementById("eText");
+let encodeButton = document.getElementById("encodeButton");
+let decodeButton = document.getElementById("decodeButton");
 
-b1.addEventListener("click", () => {
-
-  let msg1 = document.getElementById("msgCode").value;
-
+encodeButton.addEventListener("click", () => {
+  let msg = document.getElementById("msgCode").value;
   let number = parseInt(document.getElementById("move").value);
-
-  let eText = window.cipher.encode(number, msg1);
-
+  let encodetext = window.cipher.encode(number, msg);
   document.getElementById("write-decode").innerHTML = "";
-  document.getElementById("write-code").innerHTML = "Essa é sua mensagem cifrada: " + "</br>" + "</br>" + eText;
-
+  document.getElementById("write-code").innerHTML = "Essa é sua mensagem cifrada: " + "</br>" + "</br>" + encodetext;
 });
 
-let b2= document.getElementById("dText");
-
-b2.addEventListener("click", () => {
-
-  let msg2 = document.getElementById("msgCode").value;
-
+decodeButton.addEventListener("click", () => {
+  let msg = document.getElementById("msgCode").value;
   let number = parseInt(document.getElementById("move").value);
-
-  let dText = window.cipher.decode(number, msg2);
-
+  let decodeText = window.cipher.decode(number, msg);
   document.getElementById("write-code").innerHTML = "";
-  document.getElementById("write-decode").innerHTML = "Essa é sua mensagem decifrada: " + "</br>"  + "</br>" + dText;
-
+  document.getElementById("write-decode").innerHTML = "Essa é sua mensagem decifrada: " + "</br>"  + "</br>" + decodeText;
 });
